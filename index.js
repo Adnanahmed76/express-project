@@ -29,7 +29,7 @@ app.post("/login",(req,res)=>{
     res.status(200).json(
         {
                     status:1,
-                    msg:"login successfully",
+                    msg:"login success",
                     bodydata:req.body,
                     queryData:req.query
                 }

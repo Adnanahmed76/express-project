@@ -34,13 +34,13 @@ app.post("/login",(req,res)=>{
                     queryData:req.query
                 }
     )
-//     res.send(
-//         {
-//         status:1,
-//         msg:"login successfully",
-//         bodydata:req.body,
-//         queryData:req.query
-//     }
-// )
+    res.send(
+        {
+        status:1,
+        msg:"login successfully",
+        bodydata:req.body,
+        queryData:req.query
+    }
+)
 })
 app.listen("800")

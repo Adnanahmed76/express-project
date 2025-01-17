@@ -1,13 +1,50 @@
 let express=require("express");
+const {checkToken}=require("./checkTokenmiddleware")
 let app=express();
+// let Token ="1234";
+// let mypass="adnan";
 app.use(express.json());
-app.get("/",(req,res)=>{
+
+// let checkToken=(req,res,next)=>{
+// if(req.query.token==""|| req.query.token==undefined){
+//     return res.send({
+//         status:0,
+//         msg:"plesae fill the token"
+//     })
+// }
+// if(req.query.token!=Token){
+//     return res.send({
+//         status:1,
+//         msg:"please fil the Correct token"
+//     })
+// }
+// next();
+// }
+
+// app.use(checkToken)//Middleware
+// app.use((req,res,next)=>{
+//     if(req.query.pass==""|| req.query.pass==undefined){
+//         return res.send({
+//             status:0,
+//             msg:"please fill the password"
+//         })
+        
+//     }
+//     if(req.query.pass!=mypass){
+//         return res.send({
+//             status:1,
+//             msg:"plesse fill the correct Token"
+//         })
+//     }
+//     next();
+// })
+app.get("/",checkToken,(req,res)=>{
     res.send({
         status:1,
         msg:"home page api"
     })
 })
-app.get("/news",(req,res)=>{
+app.get("/news",checkToken,(req,res)=>{
     res.send({
         status:2,
         msg:"my Second api"

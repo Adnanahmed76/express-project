@@ -37,7 +37,7 @@ app.post("/login",(req,res)=>{
     res.send(
         {
         status:1,
-        msg:"login successfully",
+        msg:"Login successfully",
         bodydata:req.body,
         queryData:req.query
     }

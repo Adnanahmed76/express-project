@@ -10,7 +10,7 @@ app.get("/",(req,res)=>{
 app.get("/news",(req,res)=>{
     res.send({
         status:2,
-        msg:"my second api"
+        msg:"my Second api"
     })
 })
 app.get("/products",(req,res)=>{

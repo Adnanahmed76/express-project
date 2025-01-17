@@ -21,7 +21,7 @@ app.get("/products",(req,res)=>{
 })
 app.get("/news/:id",(req,res)=>{
     let currentid=req.params.id
-    res.send("news detailsa api"+currentid)
+    res.send("news details api"+currentid)
 })
 
 app.post("/login",(req,res)=>{

@@ -76,7 +76,7 @@ app.post("/login",(req,res)=>{
     res.send(
         {
         status:1,
-        msg:"Login successfully",
+        msg:"Login success",
         bodydata:req.body,
         queryData:req.query
     }

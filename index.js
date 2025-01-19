@@ -49,7 +49,7 @@ app.get("/",checkToken,(req,res)=>{
 app.get("/news",checkToken,(req,res)=>{
     res.send({
         status:2,
-        msg:"my Second api"
+        msg:"My Second api"
     })
 })
 app.get("/products",(req,res)=>{

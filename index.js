@@ -43,7 +43,7 @@ app.use(express.json());
 app.get("/",checkToken,(req,res)=>{
     res.send({
         status:1,
-        msg:"home page api"
+        msg:"home Page api"
     })
 })
 app.get("/news",checkToken,(req,res)=>{
